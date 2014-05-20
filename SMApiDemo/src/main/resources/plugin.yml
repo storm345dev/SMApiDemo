@@ -1,0 +1,11 @@
+name: SMApiDemo
+author: 'storm345'
+main: org.stormdev.SMApiDemo.main.SMApiDemo
+version: 1.0
+softdepend: [ServerManager]
+
+commands:
+    customevent:
+        description: Call a dummy custom SMEvent
+        aliases: [dummyevent]
+        usage: /<command>
