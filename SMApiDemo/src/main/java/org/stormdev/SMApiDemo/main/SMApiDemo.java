@@ -3,7 +3,9 @@ package org.stormdev.SMApiDemo.main;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.stormdev.SMApiDemo.commands.CustomEvent;
+import org.stormdev.SMApiDemo.commands.TestMessage;
 import org.stormdev.SMApiDemo.listeners.DummyEventListener;
+import org.stormdev.SMApiDemo.listeners.MessageListener;
 import org.stormdev.servermanager.api.APIProvider;
 import org.stormdev.servermanager.api.ServerManagerAPI;
 
@@ -44,8 +46,10 @@ public class SMApiDemo extends JavaPlugin {
 		getLogger().info("API provider: "+api.getProvider().name()); //EIther HOST or CORE
 		
 		api.getEventManager().registerListener(new DummyEventListener()); //Register our custom event listener
+		api.getEventManager().registerListener(new MessageListener()); //Register our message listener
 		
 		getCommand("customevent").setExecutor(new CustomEvent()); //Register the command to show custom event usage
+		getCommand("testmessage").setExecutor(new TestMessage()); //Register the command to test message sending to self
 		
 		getLogger().info("SMApiDemo started!");
 	}

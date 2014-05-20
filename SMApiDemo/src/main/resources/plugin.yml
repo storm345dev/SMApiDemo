@@ -9,3 +9,7 @@ commands:
         description: Call a dummy custom SMEvent
         aliases: [dummyevent]
         usage: /<command>
+    testmessage:
+        description: Send a message to ourselves
+        aliases: [messagetest]
+        usage: /<command>
