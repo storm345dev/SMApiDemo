@@ -6,6 +6,10 @@ import org.bukkit.command.CommandSender;
 import org.stormdev.SMApiDemo.events.DummyEvent;
 import org.stormdev.SMApiDemo.main.SMApiDemo;
 
+/*
+ * A simple command executor for /customevent to demo the custom events
+ * 
+ */
 public class CustomEvent implements CommandExecutor {
 
 	@Override
